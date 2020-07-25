@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "223645510082",
+    "firebase_url": "https://tenent-management.firebaseio.com",
+    "project_id": "tenent-management",
+    "storage_bucket": "tenent-management.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223645510082:android:2a75a8475f0404e57fce5b",
+        "android_client_info": {
+          "package_name": "com.teamhack01.tenant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223645510082-eufue7fgg1vl7vbjheomq1ggjk2is6eg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamhack01.tenant",
+            "certificate_hash": "a5167723800d0da4734679fc48026a9f87078f7b"
+          }
+        },
+        {
+          "client_id": "223645510082-s136620otffna1jhisripq5m1edu8nfs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8izsJVdGhSGszBqU5hDF47CJVJ3axvuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223645510082-s136620otffna1jhisripq5m1edu8nfs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
