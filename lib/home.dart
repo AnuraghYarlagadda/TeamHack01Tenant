@@ -145,84 +145,40 @@ class HomeState extends State<Home> {
                                   return Container(
                                       child: Card(
                                           elevation: 5,
-                                          child: ExpansionTile(
-                                              title: Text(
-                                                  "Property Name: " +
-                                                      this
-                                                          .properties[index]
-                                                          .propertyName,
-                                                  style: GoogleFonts.ptSansNarrow(
-                                                      textStyle: TextStyle(
-                                                          color: Colors.black,
-                                                          fontSize: 20,
-                                                          fontWeight: FontWeight
-                                                              .w700))),
-                                              subtitle: Text("Location: " + this.properties[index].location,
-                                                  style: GoogleFonts.inconsolata(
-                                                      textStyle: TextStyle(
-                                                          color:
-                                                              Colors.blueGrey,
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight
-                                                              .w600))),
-                                              children: <Widget>[
-                                                Padding(
-                                                    padding:
-                                                        EdgeInsets.fromLTRB(
-                                                            10, 0, 10, 5),
-                                                    child: Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: <Widget>[
-                                                        Text(
-                                                          "Leasetime: " +
-                                                              this
-                                                                  .properties[
-                                                                      index]
-                                                                  .leasetime,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: TextStyle(
-                                                              fontSize: 15,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400),
-                                                        ),
-                                                        Text(
-                                                          "Rent Amount: " +
-                                                              this
-                                                                  .properties[
-                                                                      index]
-                                                                  .rent,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: TextStyle(
-                                                              fontSize: 15,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400),
-                                                        ),
-                                                        Text(
-                                                          "Owner" +
-                                                              this
-                                                                  .properties[
-                                                                      index]
-                                                                  .owner_email,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: TextStyle(
-                                                              fontSize: 15,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400),
-                                                        ),
-                                                      ],
-                                                    ))
-                                              ])));
+                                          child: ListTile(
+                                            title: Text(
+                                                "Property Name: " +
+                                                    this
+                                                        .properties[index]
+                                                        .propertyName,
+                                                style: GoogleFonts.ptSansNarrow(
+                                                    textStyle: TextStyle(
+                                                        color: Colors.black,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w700))),
+                                            subtitle: Text(
+                                                "Location: " +
+                                                    this
+                                                        .properties[index]
+                                                        .location,
+                                                style: GoogleFonts.inconsolata(
+                                                    textStyle: TextStyle(
+                                                        color: Colors.blueGrey,
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w600))),
+                                            trailing: IconButton(
+                                                icon: Icon(Icons.arrow_right),
+                                                onPressed: () {
+                                                  Navigator.of(context)
+                                                      .pushNamed("viewProperty",
+                                                          arguments: {
+                                                        "property": this
+                                                            .properties[index]
+                                                      });
+                                                }),
+                                          )));
                                 })));
   }
 }
